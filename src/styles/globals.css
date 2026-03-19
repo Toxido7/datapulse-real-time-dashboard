@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 223 43% 7%;
+    --foreground: 210 40% 98%;
+    --card: 222 31% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 223 32% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 100% 62%;
+    --primary-foreground: 222 47% 10%;
+    --secondary: 191 92% 58%;
+    --secondary-foreground: 222 47% 10%;
+    --accent: 251 89% 72%;
+    --accent-foreground: 210 40% 98%;
+    --muted: 221 24% 16%;
+    --muted-foreground: 215 20% 78%;
+    --destructive: 347 89% 63%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 217 100% 62%;
+    --success: 151 68% 48%;
+    --warning: 38 92% 58%;
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+    background: #050b16;
+  }
+
+  body {
+    @apply min-h-screen bg-background font-sans text-foreground antialiased;
+    background-color: #050b16;
+    background-image:
+      radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 22%),
+      radial-gradient(circle at top right, rgba(34, 211, 238, 0.09), transparent 18%),
+      radial-gradient(circle at 50% 120%, rgba(139, 92, 246, 0.1), transparent 22%),
+      linear-gradient(180deg, #050b16 0%, #07101c 28%, #081220 62%, #091321 100%);
+  }
+
+  #root {
+    @apply min-h-screen;
+    background: linear-gradient(180deg, rgba(5, 11, 22, 0.98), rgba(7, 13, 24, 0.98));
+  }
+
+  ::selection {
+    background: rgba(59, 130, 246, 0.35);
+    color: #eff6ff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(10, 18, 32, 0.82);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(71, 85, 105, 0.9);
+    border: 2px solid rgba(10, 18, 32, 0.86);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(96, 165, 250, 0.9);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .surface-grid {
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
